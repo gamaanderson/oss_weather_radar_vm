@@ -3,4 +3,4 @@ set -x
 
 # PyTMatrix install
 
-sudo pip install pytmatrix
+sudo -H pip install pytmatrix
