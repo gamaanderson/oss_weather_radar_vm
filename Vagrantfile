@@ -41,6 +41,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8080
   
   config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
   
   # provision machine with open source radar software.
   
@@ -50,6 +51,10 @@ Vagrant.configure("2") do |config|
   # Py-ART
   config.vm.provision :shell, :privileged => false, :path => "provision_scripts/install_pyart.sh"
   config.vm.provision :shell, :privileged => false, :path => "provision_scripts/install_pyart_notebooks.sh"
+  
+  # ARTView
+  
+  config.vm.provision :shell, :privileged => false, :path => "provision_scripts/install_artview.sh"
   
   # wradlib
   config.vm.provision :shell, :privileged => false, :path => "provision_scripts/install_wradlib.sh"
@@ -79,7 +84,6 @@ Vagrant.configure("2") do |config|
 
   # copy VM scripts
   config.vm.provision :shell, :privileged => false, :path => "provision_scripts/copy_guest_scripts.sh"
-
   # cleanup
   config.vm.provision :shell, :privileged => false, :path => "provision_scripts/cleanup.sh" 
 
