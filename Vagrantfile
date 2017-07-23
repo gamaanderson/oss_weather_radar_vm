@@ -53,8 +53,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :privileged => false, :path => "provision_scripts/install_pyart_notebooks.sh"
   
   # ARTView
-  
   config.vm.provision :shell, :privileged => false, :path => "provision_scripts/install_artview.sh"
+  config.vm.provision :shell, :privileged => false, :path => "provision_scripts/install_artview_notebooks.sh"
   
   # wradlib
   config.vm.provision :shell, :privileged => false, :path => "provision_scripts/install_wradlib.sh"
