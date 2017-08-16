@@ -3,7 +3,7 @@
 
 #install dependencies
 
-sudo apt-get install python-qt4
+sudo apt-get -qq install python-qt4
 
 #download and install
 cd /tmp
@@ -11,7 +11,5 @@ git clone https://github.com/nguy/artview.git artview
 cd artview
 sudo python setup.py install
 
-#download example data
-git clone https://github.com/gamaanderson/artview_data.git data
 
 cd ~

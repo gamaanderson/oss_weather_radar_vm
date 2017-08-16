@@ -12,3 +12,5 @@ git clone https://github.com/gamaanderson/artview_course.git artview_short_cours
 # Optionally get example data,
 cd artview_short_course
 git clone https://github.com/gamaanderson/artview_data.git data
+
+cd ~
